@@ -1,0 +1,792 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* -----------------------The Top --------------------------*/
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgba(18, 1, 255, 0.543);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+#myBtn:hover {
+    background-color: rgb(17, 1, 255);
+}
+
+/*------ Header --------*/
+header {
+    background-image: url(../img/beach\ 1.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    padding-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10%;
+
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+/* Menu */
+.topnav {
+    overflow: hidden;
+    margin-bottom: 10%;
+}
+
+.topnav ul { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+
+    font-family: 'Montserrat';
+    font-weight: 400;
+    ;
+    color: #FFFFFF;
+}
+
+.topnav a img {
+    width: 273px;
+}
+
+.topnav a:hover:not(:nth-child(4n)) {
+    color: rgba(92, 246, 233, 0.772);
+}
+
+.topnav a.active {
+    color: rgb(29, 234, 176);
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.topnav .icon:hover {
+    color: black;
+}
+
+@media screen and (max-width: 900px) {
+    .topnav a img {
+        width: 185px;
+    }
+
+    .topnav a:not(:nth-child(4n)) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+        font-size: 20px;
+    }
+
+
+    .topnav a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .topnav.responsive {
+        position: relative;
+        background: rgba(7, 104, 249, 0.534);
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 1px;
+        top: 17px;
+    }
+
+    .topnav ul {
+        display: block;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        font-weight: 600;
+    }
+}
+
+header .row {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    width: 80%;
+    text-align: center;
+}
+
+header .row h1 {
+    font-family: 'Roboto Slab';
+    font-size: 6em;
+    line-height: 132px;
+}
+
+header .row p {
+    display: block;
+    width: 80%;
+    align-self: center;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    line-height: 150%;
+}
+
+header .row-button {
+    width: 15%;
+}
+
+header .row-button button {
+    background: #1C91FF;
+    border-radius: 60px;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1372px) {
+    header .row h1 {
+        font-size: 4.5em;
+    }
+
+    header .row p {
+        width: 85%;
+        font-size: 15px;
+    }
+
+    header .row-button {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header .row h1 {
+        font-size: 4em;
+    }
+
+    header .row p {
+        font-size: 17px;
+    }
+
+    header .row-button {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header .row-button {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header .row h1 {
+        font-size: 3.5em;
+    }
+
+    header .row-button {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header .row h1 {
+        font-size: 3.1em;
+    }
+
+    header .row-button {
+        width: 50%;
+    }
+}
+
+
+/*header ul {
+    list-style: none;
+    width: 85%;
+}
+
+header ul li {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid rgba(102, 51, 153, 0);
+    margin: 1%;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(253, 245, 230, 0);
+}
+
+header li a:hover {
+    color: rgba(92, 246, 233, 0.772);
+}
+
+.text-header {
+    height: auto;
+    position: relative;
+    top: 10em;
+}
+
+.text-header div {
+    height: auto;
+    width: 50%;
+}
+
+.text-header h1 {
+    font-family: 'Roboto Slab';
+    font-weight: 400;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.text-header h3 {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.text-header button {
+    border-radius: 60px;
+    width: 10px;
+    min-width: 200px;
+}
+
+@media (max-width:960px) {
+    .text-header {
+        position: absolute;
+        margin: 15%;
+        top: 15em;
+    }
+
+    .text-header div div {
+        max-width: 50%;
+    }
+
+    header div {
+        height: 100vh;
+    }
+}
+
+@media only screen and (min-width:960px) and (max-width: 992px) {
+    .text-header {
+        position: absolute;
+        margin: 15%;
+        top: 15em;
+    }
+
+    .text-header div div {
+        max-width: 50%;
+    }
+
+    header div {
+        height: 100vh;
+    }
+}
+
+@media (max-width:960px) {
+    .text-header div {
+        width: 90%;
+    }
+
+    .text-header div div {
+        max-width: 50%;
+    }
+}
+
+/*------------- About ----------*/
+#about {
+    margin-top: 3%;
+}
+
+#about div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#about div .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    gap: 40px;
+    width: 90%;
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin: 3% 0 3%;
+    transition: flex-basis 500ms ease-in-out;
+}
+
+#about .left {
+    flex: 50%;
+    height: 600px;
+    max-width: 555px;
+    background-image: url(../img/left.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    transition: max-width 4s, height 6s;
+}
+
+#about .right {
+    flex: 50%;
+    height: 600px;
+    max-width: 555px;
+    background-color: #1C91FF;
+    /*border-radius: 0;*/
+    transition: max-width 4s, height 6s;
+}
+
+/* Loop*/
+
+/*Left*/
+#about .left {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+#about .left::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 95%;
+    height: 95%;
+    opacity: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out;
+}
+
+#about .left:hover {
+    transform: scale(1.1, 1.1);
+}
+
+#about .left:hover::after {
+    opacity: 1;
+}
+
+/*Right*/
+
+#about .right {
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+#about .right::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out;
+}
+
+#about .right:hover {
+    transform: scale(1.1, 1.1);
+}
+
+#about .right:hover::after {
+    opacity: 1;
+}
+
+/*--------------*/
+
+/*#about .right:hover {
+    border-radius: 10%;
+    transition: all 0.3s ease-in-out;
+}*/
+
+@media (max-width: 900px) {
+
+    #about div {
+        transition: all 3s;
+    }
+
+    #about .left {
+        height: 300px;
+        background-size: cover;
+        transition: max-width 2s, height 4s;
+    }
+
+    #about .right {
+        height: auto;
+        flex: 100%;
+        transition: max-width 2s, height 4s;
+    }
+}
+
+#about .about-right {
+    width: 80%;
+    margin: 10% 0 10% 0;
+    display: block;
+    text-align: left;
+}
+
+#about .about-right h2 {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    color: #FFFFFF;
+}
+
+#about .about-right p {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #FFFFFF;
+    margin-top: 5%;
+}
+
+#about .about-right button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+    gap: 10px;
+    background: #FFFFFF;
+    border-radius: 60px;
+    border: 0;
+}
+
+#about .about-right button span {
+    width: 144px;
+    height: 30px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: #077ae5;
+}
+
+@media (max-width: 700px) {
+
+    #about .about-right button {
+        flex: 100%;
+    }
+}
+
+/*-------- Choose_Us -------- */
+
+/*#choose_us .row{
+    width: 90%;
+    border: 1px solid black
+}*/
+
+#choose_us {
+    background-color: #F0F1F6;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#choose_us .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 0;
+    border-radius: 20px;
+}
+
+.h-1 {
+    display: block;
+    margin-bottom: 5%;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+    color: #00182F;
+}
+
+#choose_us .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: center;
+    justify-content: center;
+    width: 85%;
+    gap: 18px;
+}
+
+#choose_us .img-1 {
+    /* background-image: url(https://s3-alpha-sig.figma.com/img/28b1/5c4b/ce0522d81f24cc6459610d0442d1de39?Expires=1670198400&Signature=ei6lW~qGgiIe4a6qv6fXcnKR6C9vzxhGufzwS87GHDSyGmCRnlpz8VY~4gOKXQVsVk-dsMBEi~NeKD8dvIoiDtcoj49o-JRgwyAsHSejF4e4jmUn6LgtqhW5OkHgA9TQYzz-b3qZzMSFBLBR-7HtHyJY39LMx4kItfS5GyRRunuWI-pSCu-B7I2ZBeWK0dsylULzhDxEFDAsGkJ9kjaXY7gfVX~mAq4055FaoMRB-24ilGK4IHp5mCe~hqhNvhEsY68fvZnfAZRFuxLRHd2J-HN2wWkk-ieRsDauIZvXzyzhPwnEV4f5aOfRmqgcxrbp8N50UyB4fjUPDuvGr8V3cw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+    */
+    background-image: url(../img/pic-1.png);
+}
+
+#choose_us .img-2 {
+    background-image: url(../img/pic-2.png);
+}
+
+#choose_us .img-3 {
+    background-image: url(../img/pic-3.png);
+}
+
+#choose_us .img-4 {
+    background-image: url(../img/pic-4.png);
+}
+
+#choose_us .img-5 {
+    background-image: url(../img/pic-5.png);
+}
+
+#choose_us .img-6 {
+    background-image: url(../img/pic-6.png);
+}
+
+#choose_us [class*="img-"] {
+    background-position: center center;
+    background-size: cover;
+    height: 245px;
+    border-radius: 20px 0 0 20px;
+}
+
+@media (max-width: 988px) {
+
+    #choose_us [class*="img-"] {
+        border-radius: 20px 20px 0 0;
+    }
+
+}
+
+/*-------- Our Tour ---------*/
+
+#our_tour [class*="img-"] {
+    background-position: center center;
+    background-size: cover;
+}
+
+#our_tour .img-1 {
+    background-image: url(../img/our-tour_1.png);
+}
+
+#our_tour .img-2 {
+    background-image: url(../img/our-tour_2.png);
+}
+
+#our_tour .img-3 {
+    background-image: url(../img/our-tour_3.png);
+}
+
+#our_tour .containe-fluid {
+    padding: 5% 0 5%;
+}
+
+#our_tour .row {
+    width: 95%;
+}
+
+#our_tour .color-list {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 373px;
+}
+
+#our_tour .color {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex: 10 0 5em;
+    box-shadow: 0 10px 30px #424242;
+
+    /* Handles any clipping/overflow issues on transition */
+    overflow: hidden;
+    padding: 1em;
+    transition: flex-basis 500ms ease-in-out;
+}
+
+#our_tour .color:hover {
+    flex-basis: 20em;
+}
+
+#our_tour .name {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#our_tour .details {
+    margin: 0;
+    padding: 3% 2% 3%;
+    width: 60%;
+    height: auto;
+    max-height: 320px;
+    opacity: 0;
+    border: 0;
+    background-color: hsla(19, 36%, 42%, 0);
+    align-self: flex-start;
+    justify-self: center;
+    transition: width 900ms ease-in-out;
+}
+
+#our_tour .color:hover .details {
+    opacity: 1;
+    border: 1px solid #66339900;
+    background-color: hsla(19, 36%, 42%, 0.613);
+    box-shadow: 0 0 30px #424242;
+}
+
+#our_tour .color:hover .details:hover {
+    background-color: hsla(19, 36%, 42%, 0.758);
+    box-shadow: 0 0 60px #2e2e2e;
+    width: 80%;
+    height: auto;
+}
+
+
+#our_tour .color .details span {
+    color: #ffffff00;
+    transition: color 500ms ease-in-out;
+}
+
+#our_tour .color:hover .details span {
+    color: #ffffff;
+}
+
+#our_tour .details span {
+    font-size: 1em;
+
+    transition: font-size 500ms ease-in-out;
+}
+
+#our_tour .color:hover .details:hover span {
+    font-size: 1.1em;
+}
+
+/*----------- details-2 --------*/
+#our_tour .details-2 {
+    margin: 0;
+    padding: 3% 0 3%;
+    width: 50%;
+    opacity: 0;
+    border: 0;
+    align-self: flex-end;
+    justify-self: center;
+    transition: width 900ms;
+    transition: opacity 900ms;
+}
+
+#our_tour .details-2 button {
+    /*flex: 1 0 4em;*/
+    width: 100%;
+    border: 1px;
+    padding: 3%;
+    border-radius: 30px;
+    background-color: #FB9E40;
+    transition: padding 900ms;
+}
+
+#our_tour .details:hover .details-2 button {
+    padding: 1px 30px;
+}
+
+#our_tour .details:hover .details-2 button:hover {
+    border: 5px solid rgb(255, 123, 0);
+}
+
+#our_tour .details:hover .details-2 {
+    opacity: 1;
+}
+
+#our_tour .details:hover .details-2 {
+    width: 65%;
+    height: auto;
+}
+
+#our_tour .details-2 span {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+    padding: 2%;
+}
+
+
+
+@media (min-width: 600px) {
+    #our_tour .color-list {
+        flex-direction: row;
+    }
+
+    #our_tour .color {
+        flex-shrink: 1;
+    }
+}
+
+@media (max-width: 988px) {
+    #our_tour .color-list {
+        flex-direction: column;
+        height: 70vh;
+    }
+
+    #our_tour .details {
+        padding-bottom: 1%;
+        width: 70%;
+        height: auto;
+    }
+
+    #our_tour .color:hover .details {
+        transition: background-color 500ms ease-in-out;
+        transition: box-shadow 500ms ease-in-out;
+        transition: height 500ms ease-in-out;
+        transition: width 900ms ease-in-out;
+    }
+
+    #our_tour .color:hover .details:hover {
+        width: 85%;
+        height: auto;
+    }
+
+    #our_tour .details-2 button {
+        flex: 10 0 9em;
+    }
+
+    #our_tour .details-2 span {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;
+        text-align: center;
+        padding: 2%;
+    }
+}
+
+
+
+/*----------- FOOTER ----------*/
